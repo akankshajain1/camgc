@@ -1,0 +1,149 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [ ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "unique_resource_name",
+      "label": "unique_resource_name",
+      "description": "A unique name for the resource, required by GCE.",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "machine_type",
+      "label": "machine_type",
+      "description": "The machine type to create.",
+      "type": "string",
+      "default": "n1-standard-1",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "n1-standard-1",
+          "label": "n1-standard-1 (1 vCPU, 3.75 Memory(GB))",
+          "default": true
+        },
+        {
+          "value": "n1-standard-2",
+          "label": "n1-standard-2 (2 vCPU, 7.50 Memory(GB))"
+        },
+        {
+          "value": "n1-highmem-2",
+          "label": "n1-highmem-2 (2 vCPU, 13 Memory(GB))"
+        },
+        {
+          "value": "n1-highcpu-2",
+          "label": "n1-highcpu-2 (2 vCPU, 1.80 Memory(GB))"
+        },
+        {
+          "value": "n1-highcpu-4",
+          "label": "n1-highcpu-4 (4 vCPU, 3.60 Memory(GB))"
+        }
+      ]
+    },
+    {
+      "name": "public_key",
+      "label": "public_key",
+      "description": "User public key",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "boot_disk",
+      "label": "Boot Disk",
+      "description": "The boot disk for the instance.",
+      "type": "string",
+      "default": "centos-cloud/centos-7",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "zone",
+      "label": "zone",
+      "description": "The zone the resource should be created in.",
+      "type": "string",
+      "default": "us-central1-a",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "us-central1-a",
+          "label": "us-central1-a (Iowa, USA)",
+          "default": true
+        },
+        {
+          "value": "us-west1-a",
+          "label": "us-west1-a (Oregon, USA)"
+        },
+        {
+          "value": "us-east1-c",
+          "label": "us-east1-c (South Carolina, USA)"
+        },
+        {
+          "value": "europe-west3-a",
+          "label": "europe-west3-a (Frankfurt, Germany)"
+        },
+        {
+          "value": "asia-south1-a",
+          "label": "asia-south1-a (Mumbai, India)"
+        }
+      ]
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "Name",
+      "label": "VM instance name",
+      "description": "The unique VM resource name.",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "External_IP",
+      "label": "External IP",
+      "description": "The external IP of the virtual machine.",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "Internal_IP",
+      "label": "Internal IP",
+      "description": "The internal IP of the virtual machine.",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}
